@@ -1,0 +1,9 @@
+{
+  "name": "ImpleKnob",
+  "private": true,
+  "dependencies": {
+    "datatables.net-bs4": "^1.10.19",
+    "jquery": "^3.4.1",
+    "jquery-knob": "^1.2.11"
+  }
+}

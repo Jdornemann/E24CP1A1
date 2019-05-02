@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Accounts</h1>
+
+<table id="Mytable" class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Opciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accounts.each do |account| %>
+      <tr>
+        <td><%= account.name %></td>
+        <td><%= account.amount %></td>
+        <td><%= link_to 'Show', account %>
+        <%= link_to 'Edit', edit_account_path(account) %>
+        <%= link_to 'Destroy', account, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Account', new_account_path %>
+
+<br>
+<h1>Creador de color</h1>
+<br>
+<input type="text" value="0" class="dial" id="red">
+<input type="text" value="0" class="dial" id="green">
+<input type="text" value="0" class="dial" id="blue">
+<br>
+<br>
+
+<div id="result-rgb" style="background-color:lightblue;padding: 60px;">
+  <h3>Color Applied</h3>
+  <p>Choose RGB number in the circle above</p>
+</div>
